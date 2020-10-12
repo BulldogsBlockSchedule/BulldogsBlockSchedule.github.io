@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>North Schedule</title>
+	<style type="text/css">
+body {
+width: 100%;
+height: 100vh;
+background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+		
+		.Day{
+
+			text-align: left;
+			font-size: 30px;
+			color:transparent;
+		}
+		#Clock{
+			color:white;
+			margin: 0px;
+			padding: 0px;
+			text-align: center;
+		}
+				#Colon{
+			color:white;
+			margin: 0px;
+			padding: 0px;
+			text-align: center;
+			font-size: 50px;
+			font-weight: 100px
+			}
+						#countdown{
+			color:white;
+			margin: 0px;
+			padding: 0px;
+			font-size: 50px;
+			text-align: center;
+		}
+.middle{
+  position: absolute;
+  text-align: center;
+  top: 95%;
+  width: 2%;
+  display: flex;
+  justify-content: center;
+}
+.text{
+  color: #fff;
+  font-size: 12px;
+  font-family: "montserrat";
+  font-weight: 900;
+  cursor: pointer;
+  border-color: white;
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 50%;
+}
+.hidden{
+  max-width: 0;
+  opacity: 0;
+  border-radius: 0%;
+  border-width: 10px;
+  transition: 0.5s ease-in;
+}
+
+.text:hover .hidden{
+  opacity: 1;
+  max-width: 1em;
+}
+.text:hover{
+scale:1.3;
+}
+		* {
+margin: 0;
+padding: 0;
+}
+
+h1 {
+padding: 40px;
+text-align: center;
+color: #fff;
+font-family: lato;
+font-weight: 900;
+text-transform: uppercase;
+font-size: 60px;
+}
+.box div {
+height: 60px;
+width: 60px;
+position: absolute;
+top: 10%;
+left: 10%;
+animation: animate 4s linear infinite;
+background: rgba(255,255,255,.5);
+border-radius: 15px;
+}
+.box div:nth-child(1) {
+top: 20%;
+left: 20%;
+animation: animate 8s linear infinite;
+}
+.box div:nth-child(2) {
+top: 26%;
+left: 89%;
+animation: animate 6s linear infinite;
+}
+.box div:nth-child(3) {
+top: 80%;
+left: 90%;
+animation: animate 5s linear infinite;
+}
+.box div:nth-child(4) {
+top: 65%;
+left: 75%;
+animation: animate 7s linear infinite;
+}
+.box div:nth-child(5) {
+top: 90%;
+left: 10%;
+animation: animate 9s linear infinite;
+}
+.box div:nth-child(6) {
+top: 30%;
+left: 60%;
+animation: animate 5s linear infinite;
+}
+.box div:nth-child(7) {
+top: 70%;
+left: 33%;
+animation: animate 8s linear infinite;
+}
+.box div:nth-child(8) {
+top: 75%;
+left: 60%;
+animation: animate 10s linear infinite;
+}
+.box div:nth-child(9) {
+top: 23%;
+left: 50%;
+animation: animate 6s linear infinite;
+}
+.box div:nth-child(10) {
+top: 35%;
+left: 7%;
+animation: animate 10s linear infinite;
+}
+@keyframes animate {
+0% {
+transform: scale(0) translateY(0) rotate(50deg);
+}
+100% {
+transform: scale(1.6) translateY(-250px) rotate(360deg);
+}
+}
+	</style>
+
+</head>
+<body>
+	
+<h1><b><u>BULLDOGS BLOCK SCHEDULE</u></b></h1>
+<div class="Day">
+<div id="Clock"><b></div> 
+	<br>
+<u><div id="Colon"></div> 
+	<br>
+	<b><div id="countdown"></b></div>
+</div>
+<div class="text middle circle">
+	<span style="font-size: 12px">P</span>
+	<span class="hidden">r</span>
+	<span class="hidden">e</span>
+	<span class="hidden">e</span>
+	<span class="hidden">t</span>
+	<span class="hidden">h</span>
+	<span class="hidden">a</span>
+	<span class="hidden">m</span>
+	<span style="font-size: 12px">Y</span>
+	<span class="hidden">e</span>
+	<span class="hidden">r</span>
+	<span class="hidden">r</span>
+	<span class="hidden">a</span>
+	<span class="hidden">g</span>
+	<span class="hidden">u</span>
+	<span class="hidden">d</span>
+	<span class="hidden">i</span>	
+</div>
+<div class="box">
+    <div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+</div>
+<script type="text/javascript">
+
+
+	setInterval(Clock,1000);
+	function Clock() {
+		
+		var Start= new Date("August 10, 2020").getTime();
+		var now= new Date();
+		var newt= now.getTime();
+		var p1e = now.setHours(9,13,0);
+		var p1s = now.setHours(7,45,0);
+		var pas = now.setHours(9,19,0);
+		var pae = now.setHours(9,49,0);
+		var p2e = now.setHours(11,23,0);
+		var p2s = now.setHours(9,55,0);
+		var p3s = now.setHours(11,29,0);
+		var p3e = now.setHours(13,41,0);
+		var p4e = now.setHours(15,15,0);
+		var p4s = now.setHours(13,47,0);
+		var dope=true;
+		var time = new Date();
+		var hr= time.getHours();
+		var min=time.getMinutes();
+		var sec=time.getSeconds();
+		var A;
+		var B;
+		var Day=time.getDay();
+		var x=document.getElementById("Clock");
+		var Dayte= newt-Start;
+		var Dayne= Math.round(Dayte/86400000);
+		var holiday= false;
+		if(Dayne%2==0){
+			A=true;
+		}else{
+			B=true;
+		}
+
+		if(hr>=23 && min>=59 &&sec>=55){
+			if(A==false){
+				B=false;
+				A=true
+			}else if (A==true){
+				A=false;
+				B=true;
+			}
+		}
+		if(holiday==true){
+			document.getElementById('Colon').innerText="HOLIDAY!!!";
+			document.getElementById('Colon').textContent="HOLIDAY!!!";
+		}
+		if(Day==6 || Day==0&&holiday==false){
+			document.getElementById('Colon').innerText="Weekend";
+			document.getElementById('Colon').textContent="Weekend";
+		}
+		if(Day != 6 && Day!=0 && holiday==false){
+					if(hr>15 && min>14 && sec>=59){
+						console.log(Day);
+		document.getElementById('Colon').innerText="School's Over";
+		document.getElementById('Colon').textContent="School's Over";
+		}
+					if(p1s<newt && newt<p1e){
+								var p =(p1e-newt)
+							    var h=Math.floor(p/3600000)
+							    var m=Math.floor(p/60000)
+							    var s=Math.floor(((p/1000)/60))
+							    var se=((p/1000)/60)
+							    var sc=Math.floor((se-s)*60)
+							    if(m>60){
+							    	m=m-60;
+							    }
+							    if (sc<10){
+							      document.getElementById("countdown").innerHTML = h+":"+m+":"+"0"+sc;
+							    }else if(m<10){
+							    	document.getElementById("countdown").innerHTML = h+":"+"0"+m+":"+sc;
+							    }else if(m<10 && sc<10){
+							    	document.getElementById("countdown").innerHTML = h+":"+"0"+m+":"+"0"+sc;
+							    }else{
+							      document.getElementById("countdown").innerHTML = h+":"+m+":"+sc;
+							    }
+
+								document.getElementById('Colon').innerText="Period 1";
+								document.getElementById('Colon').textContent="Period 1";
+					}
+					if(pas<newt && newt<pae){
+								var p =(pae-newt)
+							    var h=Math.floor(p/3600000)
+							    var m=Math.floor(p/60000)
+							    var s=Math.floor(((p/1000)/60))
+							    var se=((p/1000)/60)
+							    var sc=Math.floor((se-s)*60)
+							    if(m>60){
+							    	m=m-60;
+							    }
+							    if (sc<10){
+							      document.getElementById("countdown").innerHTML = h+":"+m+":"+"0"+sc;
+							    }else if(m<10){
+							    	document.getElementById("countdown").innerHTML = h+":"+"0"+m+":"+sc;
+							    }else if(m<10 && sc<10){
+							    	document.getElementById("countdown").innerHTML = h+":"+"0"+m+":"+"0"+sc;
+							    }else{
+							      document.getElementById("countdown").innerHTML = h+":"+m+":"+sc;
+							    }
+
+								document.getElementById('Colon').innerText="Advisory";
+								document.getElementById('Colon').textContent="Advisory";
+					}else if(p2s<newt && newt<p2e){
+
+								var p =(p2e-newt)
+							    var h=Math.floor(p/3600000)
+							    var m=Math.floor(p/60000)
+							    var s=Math.floor(((p/1000)/60))
+							    var se=((p/1000)/60)
+							    var sc=Math.floor((se-s)*60)
+							    if(m>60){
+							    	m=m-60;
+							    }
+							    if (sc<10 && dope==true){
+
+							     var dox=h+":"+m+":"+"0"+sc;
+							    }else if(m<10 && dope == true){
+							    	var dox=h+":"+"0"+m+":"+sc;
+							    }else if(m<10 && sc<10){
+							    	dope=false;
+							    	var dox=h+":"+"0"+m+":"+"0"+sc;
+							    }else{
+							    	dope=true
+							      var dox=h+":"+m+":"+sc;
+							    }
+
+								document.getElementById('Colon').innerText=dox;
+								document.getElementById('Colon').textContent=dox;
+
+					}else if(p3s<newt && newt<p3e){
+
+								var p =(p3e-newt)
+							    var h=Math.floor(p/3600000)
+							    var m=Math.floor(p/60000)
+							    var s=Math.floor(((p/1000)/60))
+							    var se=((p/1000)/60)
+							    var sc=Math.floor((se-s)*60)
+							    if(m>60){
+							    	m=m-60;
+							    }
+							    if (sc<10){
+							      document.getElementById("countdown").innerHTML = h+":"+m+":"+"0"+sc;
+							    }else if(m<10){
+							    	document.getElementById("countdown").innerHTML = h+":"+"0"+m+":"+sc;
+							    }else if(m<10 && sc<10){
+							    	document.getElementById("countdown").innerHTML = h+":"+"0"+m+":"+"0"+sc;
+							    }else{
+							      document.getElementById("countdown").innerHTML = h+":"+m+":"+sc;
+							    }
+
+								document.getElementById('Colon').innerText="Period 3";
+								document.getElementById('Colon').textContent="Period 3";
+
+					}else if(p4s<newt && newt<p4e){
+
+								var p =(p2e-newt)
+							    var h=Math.floor(p/3600000)
+							    var m=Math.floor(p/60000)
+							    var s=Math.floor(((p/1000)/60))
+							    var se=((p/1000)/60)
+							    var sc=Math.floor((se-s)*60)
+							    if(m>60){
+							    	m=m-60;
+							    }
+							    if (sc<10){
+							      document.getElementById("countdown").innerHTML = h+":"+m+":"+"0"+sc;
+							    }else if(m<10){
+							    	document.getElementById("countdown").innerHTML = h+":"+"0"+m+":"+sc;
+							    }else if(m<10 && sc<10){
+							    	document.getElementById("countdown").innerHTML = h+":"+"0"+m+":"+"0"+sc;
+							    }else{
+							      document.getElementById("countdown").innerHTML = h+":"+m+":"+sc;
+							    }
+
+								document.getElementById('Colon').innerText="Period 4";
+								document.getElementById('Colon').textContent="Period 4";
+
+					}
+		}
+
+
+		if(A){
+			if(Day != 6 && Day!=0){
+
+		document.getElementById('Clock').innerText="Day: A";
+		document.getElementById('Clock').textContent="Day: A";
+	}
+		}else if(B){
+if(Day != 6 && Day!=0){
+
+		document.getElementById('Clock').innerText="Day: B";
+		document.getElementById('Clock').textContent="Day: B";
+	}
+		}
+
+	}
+
+</script>
+</body>
+</html>
