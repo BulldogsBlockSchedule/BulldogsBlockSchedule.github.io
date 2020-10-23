@@ -216,12 +216,12 @@ transform: scale(1.6) translateY(-250px) rotate(360deg);
 		var Day=time.getDay();
 		var x=document.getElementById("Clock");
 		var Dayte= newt-Start;
-		var Dayne= Math.round(Dayte/86400000);
+		var Dayne= Math.floor(Dayte/86400000);
 		var holiday= false;
 		if(Dayne%2==0){
-			B=true;
-		}else{
 			A=true;
+		}else{
+			B=true;
 		}
 
 		if(hr>=23 && min>=59 &&sec>=55){
@@ -242,8 +242,7 @@ transform: scale(1.6) translateY(-250px) rotate(360deg);
 			document.getElementById('Colon').textContent="Weekend";
 		}
 		if(Day != 6 && Day!=0 && holiday==false){
-					if(hr>15 && min>14 && sec>=59){
-						console.log(Day);
+					if(hr>=15 && min>13){
 		document.getElementById('Colon').innerText="School's Over";
 		document.getElementById('Colon').textContent="School's Over";
 		}
