@@ -218,6 +218,7 @@ transform: scale(1.6) translateY(-250px) rotate(360deg);
 		var Dayte= newt-Start;
 		var Dayne= Math.floor(Dayte/86400000);
 		var holiday= false;
+		var P="Passing Period";
 		if(Dayne%2==0){
 			A=true;
 		}else{
@@ -246,7 +247,7 @@ transform: scale(1.6) translateY(-250px) rotate(360deg);
 		document.getElementById('Colon').innerText="School's Over";
 		document.getElementById('Colon').textContent="School's Over";
 		}
-					if(p1s<newt && newt<p1e){
+					if(p1s<=newt && newt<p1e){
 								var p =(p1e-newt)
 							    var h=Math.floor(p/3600000)
 							    var m=Math.floor(p/60000)
@@ -268,6 +269,29 @@ transform: scale(1.6) translateY(-250px) rotate(360deg);
 
 								document.getElementById('Colon').innerText="Period 1";
 								document.getElementById('Colon').textContent="Period 1";
+					}
+					if (p1e<=newt && newt<pas) {
+								var p =(pas-newt)
+							    var h=Math.floor(p/3600000)
+							    var m=Math.floor(p/60000)
+							    var s=Math.floor(((p/1000)/60))
+							    var se=((p/1000)/60)
+							    var sc=Math.floor((se-s)*60)
+							    if(m>60){
+							    	m=m-60;
+							    }
+							    if (sc<10){
+							      document.getElementById("countdown").innerHTML = h+":"+m+":"+"0"+sc;
+							    }else if(m<10){
+							    	document.getElementById("countdown").innerHTML = h+":"+"0"+m+":"+sc;
+							    }else if(m<10 && sc<10){
+							    	document.getElementById("countdown").innerHTML = h+":"+"0"+m+":"+"0"+sc;
+							    }else{
+							      document.getElementById("countdown").innerHTML = h+":"+m+":"+sc;
+							    }
+
+								document.getElementById('Colon').innerText=P;
+								document.getElementById('Colon').textContent=P;
 					}
 					if(pas<newt && newt<pae){
 								var p =(pae-newt)
@@ -291,7 +315,31 @@ transform: scale(1.6) translateY(-250px) rotate(360deg);
 
 								document.getElementById('Colon').innerText="Advisory";
 								document.getElementById('Colon').textContent="Advisory";
-					}else if(p2s<newt && newt<p2e){
+					}
+					if (pae<=newt && newt<p2s) {
+								var p =(p2s-newt)
+							    var h=Math.floor(p/3600000)
+							    var m=Math.floor(p/60000)
+							    var s=Math.floor(((p/1000)/60))
+							    var se=((p/1000)/60)
+							    var sc=Math.floor((se-s)*60)
+							    if(m>60){
+							    	m=m-60;
+							    }
+							    if (sc<10){
+							      document.getElementById("countdown").innerHTML = h+":"+m+":"+"0"+sc;
+							    }else if(m<10){
+							    	document.getElementById("countdown").innerHTML = h+":"+"0"+m+":"+sc;
+							    }else if(m<10 && sc<10){
+							    	document.getElementById("countdown").innerHTML = h+":"+"0"+m+":"+"0"+sc;
+							    }else{
+							      document.getElementById("countdown").innerHTML = h+":"+m+":"+sc;
+							    }
+
+								document.getElementById('Colon').innerText=P;
+								document.getElementById('Colon').textContent=P;
+					}
+					if(p2s<=newt && newt<p2e){
 
 								var p =(p2e-newt)
 							    var h=Math.floor(p/3600000)
@@ -318,7 +366,31 @@ transform: scale(1.6) translateY(-250px) rotate(360deg);
 								document.getElementById('Colon').innerText=dox;
 								document.getElementById('Colon').textContent=dox;
 
-					}else if(p3s<newt && newt<p3e){
+					}
+						if (p2e<=newt && newt<p3s) {
+								var p =(p3s-newt)
+							    var h=Math.floor(p/3600000)
+							    var m=Math.floor(p/60000)
+							    var s=Math.floor(((p/1000)/60))
+							    var se=((p/1000)/60)
+							    var sc=Math.floor((se-s)*60)
+							    if(m>60){
+							    	m=m-60;
+							    }
+							    if (sc<10){
+							      document.getElementById("countdown").innerHTML = h+":"+m+":"+"0"+sc;
+							    }else if(m<10){
+							    	document.getElementById("countdown").innerHTML = h+":"+"0"+m+":"+sc;
+							    }else if(m<10 && sc<10){
+							    	document.getElementById("countdown").innerHTML = h+":"+"0"+m+":"+"0"+sc;
+							    }else{
+							      document.getElementById("countdown").innerHTML = h+":"+m+":"+sc;
+							    }
+
+								document.getElementById('Colon').innerText=P;
+								document.getElementById('Colon').textContent=P;
+					}
+					if(p3s<=newt && newt<p3e){
 
 								var p =(p3e-newt)
 							    var h=Math.floor(p/3600000)
@@ -342,7 +414,31 @@ transform: scale(1.6) translateY(-250px) rotate(360deg);
 								document.getElementById('Colon').innerText="Period 3";
 								document.getElementById('Colon').textContent="Period 3";
 
-					}else if(p4s<newt && newt<p4e){
+					}
+					if (p3e<=newt && newt<p4s) {
+								var p =(p4s-newt)
+							    var h=Math.floor(p/3600000)
+							    var m=Math.floor(p/60000)
+							    var s=Math.floor(((p/1000)/60))
+							    var se=((p/1000)/60)
+							    var sc=Math.floor((se-s)*60)
+							    if(m>60){
+							    	m=m-60;
+							    }
+							    if (sc<10){
+							      document.getElementById("countdown").innerHTML = h+":"+m+":"+"0"+sc;
+							    }else if(m<10){
+							    	document.getElementById("countdown").innerHTML = h+":"+"0"+m+":"+sc;
+							    }else if(m<10 && sc<10){
+							    	document.getElementById("countdown").innerHTML = h+":"+"0"+m+":"+"0"+sc;
+							    }else{
+							      document.getElementById("countdown").innerHTML = h+":"+m+":"+sc;
+							    }
+
+								document.getElementById('Colon').innerText=P;
+								document.getElementById('Colon').textContent=P;
+					}
+					if(p4s<=newt && newt<p4e){
 
 								var p =(p4e-newt)
 							    var h=Math.floor(p/3600000)
