@@ -352,15 +352,15 @@ transform: scale(1.6) translateY(-250px) rotate(360deg);
 							    }
 							    if (sc<10 && dope==true){
 
-							     var dox=h+":"+m+":"+"0"+sc;
+							     document.getElementById("countdown").innerHTML = h+":"+m+":"+"0"+sc;
 							    }else if(m<10 && dope == true){
-							    	var dox=h+":"+"0"+m+":"+sc;
+							    	document.getElementById("countdown").innerHTML = h+":"+"0"+m+":"+sc;
 							    }else if(m<10 && sc<10){
 							    	dope=false;
-							    	var dox=h+":"+"0"+m+":"+"0"+sc;
+							    	document.getElementById("countdown").innerHTML = h+":"+"0"+m+":"+"0"+sc;
 							    }else{
 							    	dope=true
-							      var dox=h+":"+m+":"+sc;
+							      document.getElementById("countdown").innerHTML = h+":"+m+":"+sc;
 							    }
 
 								document.getElementById('Colon').innerText="Period 2";
