@@ -408,12 +408,13 @@ transform: scale(1.6) translateY(-250px) rotate(360deg);
 							    if(m>=60 && m<120){
 							    	m=m-60;
 							    }
-							    if (sc<10){
-							      document.getElementById("countdown").innerHTML = h+":"+m+":"+"0"+sc;
+							    if (m<10 && sc<10){
+							    	document.getElementById("countdown").innerHTML = h+":"+"0"+m+":"+"0"+sc;
 							    }else if(m<10){
 							    	document.getElementById("countdown").innerHTML = h+":"+"0"+m+":"+sc;
-							    }else if(m<10 && sc<10){
-							    	document.getElementById("countdown").innerHTML = h+":"+"0"+m+":"+"0"+sc;
+							    }else if(sc<10){
+							      document.getElementById("countdown").innerHTML = h+":"+m+":"+"0"+sc;
+
 							    }else{
 							      document.getElementById("countdown").innerHTML = h+":"+m+":"+sc;
 							    }
