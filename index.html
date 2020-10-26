@@ -206,6 +206,10 @@ transform: scale(1.6) translateY(-250px) rotate(360deg);
 		var p3e = now.setHours(13,41,0);
 		var p4e = now.setHours(15,15,0);
 		var p4s = now.setHours(13,47,0);
+		var Als = now.setHours(11,29,0);
+		var Ale = now.setHours(12,13,0);
+		var Bls = now.setHours(12,57,0);
+		var Ble = now.setHours(13,41,0);
 		var dope=true;
 		var time = new Date();
 		var hr= time.getHours();
@@ -410,9 +414,17 @@ transform: scale(1.6) translateY(-250px) rotate(360deg);
 							    }else{
 							      document.getElementById("countdown").innerHTML = h+":"+m+":"+sc;
 							    }
-
+							    if (Als<=newt && newt<Ale) {								
+							    document.getElementById('Colon').innerText="Period 3 / A Lunch";
+								document.getElementById('Colon').textContent="Period 3 / A Lunch";
+							}else if(Bls<=newt && newt<Ble){
+								document.getElementById('Colon').innerText="Period 3 / B Lunch";
+								document.getElementById('Colon').textContent="Period 3 / B Lunch";
+							}else{
 								document.getElementById('Colon').innerText="Period 3";
 								document.getElementById('Colon').textContent="Period 3";
+							}
+
 
 					}
 					if (p3e<=newt && newt<p4s) {
