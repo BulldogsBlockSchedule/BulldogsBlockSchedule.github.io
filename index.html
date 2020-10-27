@@ -255,9 +255,7 @@ transform: scale(1.6) translateY(-250px) rotate(360deg);
 								var p =(p1e-newt)
 							    var h=Math.floor(p/3600000)
 							    var m=Math.floor(p/60000)
-							    var s=Math.floor(((p/1000)/60))
-							    var se=((p/1000)/60)
-							    var sc=Math.floor((se-s)*60)
+								var sc= Math.floor((p % (1000 * 60)) / 1000);
 							    if(m>60){
 							    	m=m-60;
 							    }
@@ -278,9 +276,7 @@ transform: scale(1.6) translateY(-250px) rotate(360deg);
 								var p =(pas-newt)
 							    var h=Math.floor(p/3600000)
 							    var m=Math.floor(p/60000)
-							    var s=Math.floor(((p/1000)/60))
-							    var se=((p/1000)/60)
-							    var sc=Math.floor((se-s)*60)
+								var sc= Math.floor((p % (1000 * 60)) / 1000);
 							    if(m>60){
 							    	m=m-60;
 							    }
@@ -301,9 +297,7 @@ transform: scale(1.6) translateY(-250px) rotate(360deg);
 								var p =(pae-newt)
 							    var h=Math.floor(p/3600000)
 							    var m=Math.floor(p/60000)
-							    var s=Math.floor(((p/1000)/60))
-							    var se=((p/1000)/60)
-							    var sc=Math.floor((se-s)*60)
+								var sc= Math.floor((p % (1000 * 60)) / 1000);
 							    if(m>60){
 							    	m=m-60;
 							    }
@@ -325,9 +319,7 @@ transform: scale(1.6) translateY(-250px) rotate(360deg);
 								var p =(p2s-newt)
 							    var h=Math.floor(p/3600000)
 							    var m=Math.floor(p/60000)
-							    var s=Math.floor(((p/1000)/60))
-							    var se=((p/1000)/60)
-							    var sc=Math.floor((se-s)*60)
+								var sc= Math.floor((p % (1000 * 60)) / 1000);
 							    if(m>60){
 							    	m=m-60;
 							    }
@@ -350,9 +342,7 @@ transform: scale(1.6) translateY(-250px) rotate(360deg);
 								var p =(p2e-newt)
 							    var h=Math.floor(p/3600000)
 							    var m=Math.floor(p/60000)
-							    var s=Math.floor(((p/1000)/60))
-							    var se=((p/1000)/60)
-							    var sc=Math.floor((se-s)*60)
+								var sc=Math.floor((p % (1000 * 60)) / 1000);
 							    if(m>60){
 							    	m=m-60;
 							    }
@@ -377,9 +367,7 @@ transform: scale(1.6) translateY(-250px) rotate(360deg);
 								var p =(p3s-newt)
 							    var h=Math.floor(p/3600000)
 							    var m=Math.floor(p/60000)
-							    var s=Math.floor(((p/1000)/60))
-							    var se=((p/1000)/60)
-							    var sc=Math.floor((se-s)*60)
+								var sc= Math.floor((p % (1000 * 60)) / 1000);
 							    if(m>60){
 							    	m=m-60;
 							    }
@@ -403,16 +391,14 @@ if(m<10 && sc<10){
 								var p =(p3e-newt)
 							    var h=Math.floor(p/3600000)
 							    var m=Math.floor(p/60000)
-							    var s=Math.floor(((p/1000)/60))
-							    var se=((p/1000)/60)
-							    var sc=Math.floor((se-s)*60)
+							    var sc=Math.floor((p % (1000 * 60)) / 1000);
 							    if(m>=120){
 							    	m=m-120;
 							    }
 							    if(m>=60 && m<120){
 							    	m=m-60;
 							    }
-							    
+
 							    if (m<10 && sc<10){
 							    	document.getElementById("countdown").innerHTML = h+":"+"0"+m+":"+"0"+sc;
 							    }else if(m<10){
@@ -440,9 +426,7 @@ if(m<10 && sc<10){
 								var p =(p4s-newt)
 							    var h=Math.floor(p/3600000)
 							    var m=Math.floor(p/60000)
-							    var s=Math.floor(((p/1000)/60))
-							    var se=((p/1000)/60)
-							    var sc=Math.floor((se-s)*60)
+								var sc= Math.floor((p % (1000 * 60)) / 1000);
 							    if(m>60){
 							    	m=m-60;
 							    }
@@ -465,9 +449,7 @@ if(m<10 && sc<10){
 								var p =(p4e-newt)
 							    var h=Math.floor(p/3600000)
 							    var m=Math.floor(p/60000)
-							    var s=Math.floor(((p/1000)/60))
-							    var se=((p/1000)/60)
-							    var sc=Math.floor((se-s)*60)
+								var sc= Math.floor((p % (1000 * 60)) / 1000);
 							    if(m>60){
 							    	m=m-60;
 							    }
